@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<script>/* 尽早应用已保存的主题，避免闪一下 */try{var t=localStorage.getItem('we-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日志 | 无误差</title>
+<meta name="description" content="学习、跑步、游戏的记录。1–2 周一条，断更说明在忙（或者在偷懒）。">
+<meta name="theme-color" content="#0B0B0C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="日志 | 无误差">
+<meta property="og:description" content="学习、跑步、游戏的记录。一条不超过 500 字。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0C'/%3E%3Ctext x='16' y='23' font-size='18' font-family='monospace' fill='%2339D353' text-anchor='middle'%3E0%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">无误差</a>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="projects.html">项目</a>
+      <a href="log.html" class="active">日志</a>
+      <a href="about.html">关于</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="切换明暗主题" aria-pressed="false">◐</button>
+  </div>
+</header>
+
+<main>
+  <div class="wrap page-head">
+    <h1>日志</h1>
+    <p>1–2 周一条，一条不超过 500 字。跑步带配速，健身带重量，游戏写观察。</p>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+
+      <div id="filterBar">
+        <button type="button" data-filter="all" class="on">全部</button>
+        <button type="button" data-filter="学习">#学习</button>
+        <button type="button" data-filter="跑步">#跑步</button>
+        <button type="button" data-filter="健身">#健身</button>
+        <button type="button" data-filter="游戏">#游戏</button>
+      </div>
+
+      <article class="log" id="l004" data-tag="学习">
+        <div class="log-meta"><span>2026-10-28</span><span>#学习</span></div>
+        <h3>第一次跟段错误打交道，先怀疑自己</h3>
+        <p><span class="k">做了什么：</span>按 README 的计划写指针练习，程序直接崩了，屏幕上只剩一行 <code>Segmentation fault</code>。第一次见，以为是编译器坏了。</p>
+        <p><span class="k">卡在哪：</span>用了一个没赋值的指针。后来加 <code>-Wall -Wextra -g</code> 编译，再靠 gdb 定位到是哪一行——原来编译器早就警告过，是我没看。</p>
+        <p><span class="k">下一步：</span>以后先看警告，再怀疑编译器。这条也写进笔记了。</p>
+      </article>
+
+      <article class="log" id="l001" data-tag="学习">
+        <div class="log-meta"><span>2026-10-27</span><span>#学习</span></div>
+        <h3>v0.1 上线了，它很丑，但它存在</h3>
+        <p><span class="k">做了什么：</span>把首屏做出来了。终端能敲 <code>whoami</code> 和 <code>ls</code>，4 个目录点进去就是各个页面。代码全是手写的 HTML / CSS，加一段原生 JS。</p>
+        <p><span class="k">卡在哪：</span>第一次发布把仓库路径填错了，页面 404 了半小时。后来才明白 GitHub Pages 的地址是 <code>用户名.github.io/仓库名</code>，仓库名不同，路径就不同。</p>
+        <p><span class="k">下一步：</span>补日志页和项目页的细节，然后把 study.c 的 README 写掉。</p>
+      </article>
+
+      <article class="log" id="l002" data-tag="学习">
+        <div class="log-meta"><span>2026-10-25</span><span>#学习</span></div>
+        <h3>先学 C 而不是 Python，这个决定我还在验证</h3>
+        <p><span class="k">做了什么：</span>把这个问题认真想了一遍。选 C 的理由是：指针、内存、编译这些概念绕不过去，而且嵌入式那边全是 C。</p>
+        <p><span class="k">卡在哪：</span>C 写一个小东西要几十行，Python 三行就完了。中间好几次想放弃，转去写 Python。</p>
+        <p><span class="k">下一步：</span>先不换语言。等把指针和数组彻底写顺了，再用 Python 做 AI 那部分——两条腿走路，不用现在二选一。</p>
+      </article>
+
+      <article class="log" id="l003" data-tag="学习">
+        <div class="log-meta"><span>2026-10-22</span><span>#学习</span></div>
+        <h3>空仓库的第一天：先把 README 写了</h3>
+        <p><span class="k">做了什么：</span>发现自己那个 study.c 打开是"这里啥也没有"。决定先把 README 补上：这个仓库是干什么的、代码怎么跑、每周提交点什么。</p>
+        <p><span class="k">卡在哪：</span>一开始想"等有内容了再写 README"，结果仓库一直是空的。顺序搞反了——README 不是总结，是承诺。</p>
+        <p><span class="k">下一步：</span>每周至少提交一次，哪怕只是几道练习。</p>
+      </article>
+
+      <!-- 补记的两条：比日志开始的时间还早，所以放在最后 -->
+      <article class="log" id="l005" data-tag="跑步">
+        <div class="log-meta"><span>2026-04-15</span><span>#跑步</span></div>
+        <h3>10 公里，配速第一次跑进 5 分整</h3>
+        <p><span class="k">做了什么：</span>5'00"/km 跑完 10 公里，全程没停。最后两公里是靠数呼吸撑过去的——四步一吸、四步一呼。</p>
+        <p><span class="k">卡在哪：</span>前 3 公里跑太急，心率直接顶到 180，后面全靠意志硬扛，不是靠体能。</p>
+        <p><span class="k">下一步：</span>试试前 5 公里压到 5'15"，把后半程跑快。负分段才算真本事。</p>
+        <p class="muted" style="font-size:13px">补记：这条是 2026-10-27 回头写的，当时没记录。</p>
+      </article>
+
+      <article class="log" id="l006" data-tag="健身">
+        <div class="log-meta"><span>2026-08</span><span>#健身</span></div>
+        <h3>卧推第一次到 50 公斤（含杆）</h3>
+        <p><span class="k">做了什么：</span>卧推加杆 50 公斤，能起 3 组 5 次。从空杆 20 公斤开始，练了几个月才加上来。</p>
+        <p><span class="k">卡在哪：</span>重量一上去动作就变形：肩膀前顶、轨迹发飘。数字涨得比动作快，这不是好事。</p>
+        <p><span class="k">下一步：</span>降回 45 公斤，把动作练标准再加重。体态比数字重要。</p>
+        <p class="muted" style="font-size:13px">补记：这条是 2026-10-27 回头写的。</p>
+      </article>
+
+      <p id="filterEmpty" hidden>这一类还没有记录。游戏的第一条大概会是：某个游戏在低配机上为什么掉帧，我去翻了它的渲染管线。</p>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="stamp" aria-hidden="true">0&nbsp;ERROR</span>
+    <p class="fine">本站由我自己写的 · HTML / CSS / 一点点 JavaScript · 2026</p>
+  </div>
+</footer>
+
+<script src="assets/ui.js" defer></script>
+</body>
+</html>

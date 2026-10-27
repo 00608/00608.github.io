@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<script>/* 尽早应用已保存的主题，避免闪一下 */try{var t=localStorage.getItem('we-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>无误差 · 大一 | 学前端，也在啃 C 与边缘 AI</title>
+<meta name="description" content="无误差（no-errors-at-all）。大一，学前端，也在啃 C 和边缘 AI。终身成长、超级 i 人、跑步、健身、游戏、高敏、自我管理。">
+<meta name="theme-color" content="#0B0B0C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="无误差 · 大一 | 学前端，也在啃 C 与边缘 AI">
+<meta property="og:description" content="终身成长、超级 i 人、跑步、健身、游戏、高敏人群、自我管理、正在学前端。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0C'/%3E%3Ctext x='16' y='23' font-size='18' font-family='monospace' fill='%2339D353' text-anchor='middle'%3E0%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">无误差</a>
+    <nav>
+      <a href="index.html" class="active">首页</a>
+      <a href="projects.html">项目</a>
+      <a href="log.html">日志</a>
+      <a href="about.html">关于</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="切换明暗主题" aria-pressed="false">◐</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= 首屏 ================= -->
+  <section class="hero">
+    <div class="wrap">
+
+      <div class="term" id="term">
+        <div class="term-bar" aria-hidden="true">
+          <i></i><i></i><i></i>
+          <em>no-errors@wuwucha</em>
+        </div>
+
+        <div class="term-body" id="termBody">
+          <div class="tl cmdline"><span class="ps">no-errors@wuwucha:~$</span><span class="cmd">whoami</span></div>
+
+          <div class="tl hello">你好，我是无误差。</div>
+
+          <div class="tl id-line"><b>终身成长</b> · 我把「提高人生体验」当人生意义，不是口号</div>
+          <div class="tl id-line"><b>超级 i 人</b> · 人群里耗电，独处时充电</div>
+          <div class="tl id-line"><b>跑步爱好者</b> · 用配速表看自己有没有变快</div>
+          <div class="tl id-line"><b>健身爱好者</b> · 在练力量和体态，不为拍照</div>
+          <div class="tl id-line"><b>游戏爱好者</b> · 更关心它为什么好玩、为什么掉帧</div>
+          <div class="tl id-line"><b>高敏人群</b> · 感受得多，也更容易累；学着用它观察，而不是被它拖走</div>
+          <div class="tl id-line"><b>自我管理</b> · 在练时间和精力，不靠硬扛意志力</div>
+          <div class="tl id-line"><b>正在学前端</b> · 顺手把 C 和边缘 AI 一起啃</div>
+
+          <div class="tl cmdline" style="margin-top:10px"><span class="ps">no-errors@wuwucha:~$</span><span class="cmd">ls</span></div>
+          <div class="tl dirs"><a href="projects.html">projects/</a><a href="log.html">log/</a><a href="about.html">about/</a><a href="about.html#contact">contact/</a></div>
+        </div>
+
+        <button class="skip" id="skip" type="button">skip ⏎</button>
+      </div>
+
+      <p class="tagline">这个站是我的进度条：写我在学什么、做到哪一步、卡在哪。它现在还很薄，但每周都在长。</p>
+
+      <p class="hint" id="hint">试试敲 whoami / ls / help</p>
+      <form id="promptForm" autocomplete="off">
+        <label for="cmd">no-errors@wuwucha:~$</label>
+        <input id="cmd" name="cmd" type="text" spellcheck="false" autocapitalize="off" aria-label="输入命令">
+      </form>
+      <div id="echo" aria-live="polite"></div>
+
+    </div>
+  </section>
+
+  <!-- ================= 三个入口 ================= -->
+  <section class="section">
+    <div class="wrap">
+      <div class="entries">
+        <a class="entry" href="projects.html">
+          <em>projects</em>
+          <h3>项目</h3>
+          <p>在做的事，和打算做的事。只有状态，没有"预计几月完成"。</p>
+        </a>
+        <a class="entry" href="log.html">
+          <em>log</em>
+          <h3>日志</h3>
+          <p>学习、跑步、游戏。1–2 周一条，这是全站唯一需要持续更新的地方。</p>
+        </a>
+        <a class="entry" href="about.html">
+          <em>about</em>
+          <h3>关于</h3>
+          <p>我是谁、在学什么、怎么联系。微信二维码藏在里面。</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 最近日志 ================= -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="sec-head"><b>最近在写</b><span>recent</span></h2>
+
+      <ul class="recent">
+        <li><span class="d">2026-10-28</span><a href="log.html#l004">第一次跟段错误打交道，先怀疑自己</a></li>
+        <li><span class="d">2026-10-27</span><a href="log.html#l001">v0.1 上线了，它很丑，但它存在</a></li>
+        <li><span class="d">2026-10-25</span><a href="log.html#l002">先学 C 而不是 Python，这个决定我还在验证</a></li>
+      </ul>
+
+      <p class="empty-note"><a href="log.html">全部日志 →</a>　现在 6 条：学习 4 条，跑步、健身各 1 条；游戏还没开始。</p>
+    </div>
+  </section>
+
+  <!-- ================= 联系方式 ================= -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="sec-head"><b>找到我</b><span>contact</span></h2>
+      <ul class="links" style="margin-top:0">
+        <li><a href="mailto:276677857@qq.com">邮箱</a></li>
+        <li><a href="https://github.com/wuwucha00608" rel="me noopener" target="_blank">GitHub</a></li>
+        <li><a href="https://gitee.com/no-errors-at-all" rel="me noopener" target="_blank">Gitee</a></li>
+        <li><a href="about.html#contact">微信</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="stamp" aria-hidden="true">0&nbsp;ERROR</span>
+    <p class="fine">本站由我自己写的 · HTML / CSS / 一点点 JavaScript · 2026</p>
+  </div>
+</footer>
+
+<script src="assets/ui.js" defer></script>
+<script src="assets/terminal.js" defer></script>
+</body>
+</html>

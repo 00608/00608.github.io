@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<script>/* 尽早应用已保存的主题，避免闪一下 */try{var t=localStorage.getItem('we-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>项目 | 无误差</title>
+<meta name="description" content="在做的事和打算做的事：这个网站、study.c、一个能离线跑的小盒子。">
+<meta name="theme-color" content="#0B0B0C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="项目 | 无误差">
+<meta property="og:description" content="在做的事和打算做的事。状态标签比日期诚实。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0C'/%3E%3Ctext x='16' y='23' font-size='18' font-family='monospace' fill='%2339D353' text-anchor='middle'%3E0%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">无误差</a>
+    <nav>
+      <a href="index.html">首页</a>
+      <a href="projects.html" class="active">项目</a>
+      <a href="log.html">日志</a>
+      <a href="about.html">关于</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="切换明暗主题" aria-pressed="false">◐</button>
+  </div>
+</header>
+
+<main>
+  <div class="wrap page-head">
+    <h1>项目</h1>
+    <p>只写"在做什么"，不写"预计几月完成"。进度靠状态标签说话。</p>
+  </div>
+
+  <!-- 进行中 / 即将开发 -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="sec-head"><b>进行中</b><span>in progress</span></h2>
+
+      <article class="card">
+        <div class="card-top"><span class="idx">001</span><span class="badge doing">开发中</span></div>
+        <h3>这个网站本身</h3>
+        <p>你正在看的这几页。从零写的 HTML / CSS，加一点原生 JS 的终端开场。下一步是项目页配图。</p>
+        <p class="why"><b>为什么做：</b>想要一个印在简历上、发给别人能直接打开的地址；也想用真实项目把前端学一遍。</p>
+        <div class="tags"><i>HTML</i><i>CSS</i><i>JavaScript</i></div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><span class="idx">002</span><span class="badge doing">开发中</span></div>
+        <h3>填坑 study.c</h3>
+        <p>C 语言练习仓库。目标很简单：补 README、按周提交，让里面真的有东西可看，而不是一个空仓库。</p>
+        <p class="why"><b>为什么做：</b>空仓库比没有仓库更难看。先把"承诺"写进去，再按周往里填。</p>
+        <div class="tags"><i>C</i><i>Git</i></div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><span class="idx">003</span><span class="badge plan">规划中</span></div>
+        <h3>一个能离线跑的小盒子</h3>
+        <p>让模型跑在没有屏幕的小设备上：先做语音唤醒或图像分类，能脱离电脑独立跑通就算赢。</p>
+        <p class="why"><b>为什么做：</b>这才是"边缘 AI"四个字真正有意思的地方——不是跑分，是它真的能在你手边工作。</p>
+        <div class="tags"><i>嵌入式</i><i>AI</i><i>C</i></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 我在用 -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="sec-head"><b>我在用</b><span>toolbox</span></h2>
+      <ul class="kv">
+        <li><span class="k">编辑器</span><span>VS Code</span></li>
+        <li><span class="k">语言</span><span>C（gcc）· HTML / CSS / 一点 JavaScript</span></li>
+        <li><span class="k">版本管理</span><span>Git · GitHub / Gitee</span></li>
+        <li><span class="k">环境</span><span>Windows，刚开始用命令行</span></li>
+        <li><span class="k">还在学</span><span>调试（gdb）、基本的数据结构</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 已完成 -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="sec-head"><b>已完成</b><span>done</span></h2>
+
+      <article class="card">
+        <div class="card-top"><span class="idx">001</span><span class="badge on">已上线</span></div>
+        <h3>todo — 命令行待办</h3>
+        <p>150 行 C：结构体、数组、文件读写、命令行参数全用上了。加任务、勾掉、删掉，数据存在本地文件里，关掉再开还在。</p>
+        <p class="why"><b>为什么做：</b>想找一个“能跑通、又不只是练习”的东西，顺便把文件读写和结构体一次用明白。</p>
+        <div class="tags"><i>C</i><i>gcc</i><i>文件 I/O</i></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 简历 -->
+  <section class="section">
+    <div class="wrap">
+      <h2 class="sec-head"><b>简历</b><span>cv</span></h2>
+      <details>
+        <summary>简历 · 整理中</summary>
+        <div class="qr-box">
+          <small style="margin-top:12px">现在还不放出来，是因为大一还没有够硬的内容——一张很薄的 PDF 挂上去是减分。</small>
+          <small>计划：等有一个能跑通的项目，再写第一版。想提前看，直接<a href="mailto:276677857@qq.com">发邮件问我</a>。</small>
+        </div>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="stamp" aria-hidden="true">0&nbsp;ERROR</span>
+    <p class="fine">本站由我自己写的 · HTML / CSS / 一点点 JavaScript · 2026</p>
+  </div>
+</footer>
+
+<script src="assets/ui.js" defer></script>
+</body>
+</html>
