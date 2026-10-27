@@ -44,13 +44,23 @@
 
     <div class="lines" id="live" aria-live="polite"></div>
 
-    <form class="prompt" id="promptForm" autocomplete="off">
-      <label for="cmd">no-errors@wuwucha:~$</label>
-      <input id="cmd" name="cmd" type="text" spellcheck="false" autocapitalize="off" aria-label="输入命令">
-      <span class="caret" aria-hidden="true"></span>
-    </form>
+    <div class="cmds" id="cmds">
+      <button type="button" data-cmd="whoami">whoami</button>
+      <button type="button" data-cmd="cat projects.md">cat projects.md</button>
+      <button type="button" data-cmd="cat log.md">cat log.md</button>
+      <button type="button" data-cmd="cat about.md">cat about.md</button>
+      <button type="button" data-cmd="cat contact.md">cat contact.md</button>
+      <button type="button" data-cmd="clear">clear</button>
+    </div>
 
-    <p class="boot-hint" id="hint">输入 <b>help</b> 看能做什么　·　或者直接按 <b>Enter</b> 往下看</p>
+    <p class="boot-hint" id="hint">点上面的命令就能看到内容　·　或者直接往下滚</p>
+  </div>
+
+  <div class="boot-nav">
+    <a href="projects.html">projects/</a>
+    <a href="log.html">log/</a>
+    <a href="about.html">about/</a>
+    <a href="about.html#contact">contact/</a>
   </div>
 
   <button class="skip" id="skip" type="button">Skip Animation <span>→</span></button>
@@ -75,7 +85,7 @@
 
   <section class="section first">
     <div class="wrap">
-      <p class="lead">上面那台终端是真的能用的。<b>help</b> 列出命令，<b>ls</b> 看目录，<b>cat about.md</b> 读我。</p>
+      <p class="lead">上面那些是能点的：<b>cat projects.md</b> 看项目，<b>cat log.md</b> 看日志，<b>cat contact.md</b> 找联系方式。</p>
       <div class="entries">
         <a class="entry" href="projects.html">
           <em>projects</em>

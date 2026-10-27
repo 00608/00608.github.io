@@ -329,9 +329,8 @@ html.js #filterBar{ display:flex; }
   min-height:100dvh;
   background:#0A0A0B;
   color:#C9C9D1;
-  display:flex; align-items:center; justify-content:center;
-  padding:44px 20px 100px;
-  overflow:hidden;
+  display:flex; align-items:flex-start; justify-content:center;
+  padding:64px 20px 110px;
   background-image:
     radial-gradient(ellipse at 50% -10%, rgba(57,211,83,.10), transparent 55%),
     repeating-linear-gradient(0deg, rgba(255,255,255,.016) 0 1px, transparent 1px 3px);
@@ -380,6 +379,29 @@ html.js .prompt.on, html.js .boot-hint.on{ opacity:1; transition:opacity .4s eas
 }
 .skip span{ margin-left:6px; }
 .skip:hover{ color:var(--accent); border-color:var(--accent); }
+
+/* 命令按钮（不用键盘） */
+.cmds{
+  display:flex; flex-wrap:wrap; gap:8px; margin-top:22px;
+  opacity:0; pointer-events:none;
+}
+.cmds.on{ opacity:1; pointer-events:auto; transition:opacity .35s ease; }
+.cmds button{
+  background:transparent; border:1px solid #26262B; color:#9E9EA8;
+  font:12.5px ui-monospace,SFMono-Regular,Menlo,monospace;
+  padding:5px 10px; border-radius:3px; cursor:pointer;
+}
+.cmds button:hover{ color:var(--accent); border-color:var(--accent); }
+.cmds button:active{ color:#fff; border-color:#fff; }
+
+/* 首屏底部常驻导航：不依赖 JS，永远不会消失 */
+.boot-nav{
+  position:absolute; left:20px; bottom:20px;
+  display:flex; gap:18px;
+  font:12px ui-monospace,Menlo,monospace;
+}
+.boot-nav a{ color:#6E6E76; text-decoration:none; }
+.boot-nav a:hover{ color:var(--accent); }
 
 .cue{
   position:absolute; left:50%; bottom:12px;
