@@ -11,7 +11,7 @@
 <meta property="og:title" content="日志 | 无误差">
 <meta property="og:description" content="学习、跑步、游戏的记录。一条不超过 500 字。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0C'/%3E%3Ctext x='16' y='23' font-size='18' font-family='monospace' fill='%2339D353' text-anchor='middle'%3E0%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/style.css?v=5">
+<link rel="stylesheet" href="assets/style.css?v=6">
 </head>
 <body>
 
@@ -61,6 +61,14 @@
         <p><span class="k">下一步：</span>补日志页和项目页的细节，然后把 study.c 的 README 写掉。</p>
       </article>
 
+      <article class="log" id="l007" data-tag="学习">
+        <div class="log-meta"><span>2026-10-26</span><span>#学习</span></div>
+        <h3>todo.c 写完了，150 行，卡在读文件</h3>
+        <p><span class="k">做了什么：</span>把 todo 这个小工具写完：加任务、勾掉、删掉，数据存进 <code>todo.txt</code>，关掉终端再开还在。</p>
+        <p><span class="k">卡在哪：</span><code>fgets</code> 会把行尾的换行符一起读进来，结果每次读出来都多一行空行。加了判断把末尾的 <code>\n</code> 去掉才对。</p>
+        <p><span class="k">下一步：</span>加上截止日期，再用 <code>-Wall -Wextra</code> 把警告清零。</p>
+      </article>
+
       <article class="log" id="l002" data-tag="学习">
         <div class="log-meta"><span>2026-10-25</span><span>#学习</span></div>
         <h3>先学 C 而不是 Python，这个决定我还在验证</h3>
@@ -69,12 +77,28 @@
         <p><span class="k">下一步：</span>先不换语言。等把指针和数组彻底写顺了，再用 Python 做 AI 那部分——两条腿走路，不用现在二选一。</p>
       </article>
 
+      <article class="log" id="l008" data-tag="游戏">
+        <div class="log-meta"><span>2026-10-24</span><span>#游戏</span></div>
+        <h3>为什么这个游戏在我这本上会掉帧</h3>
+        <p><span class="k">做了什么：</span>玩的时候注意到同一个场景，站着不动稳 60 帧，鼠标一转就掉到 30 出头。</p>
+        <p><span class="k">卡在哪：</span>一开始以为是显卡不行。后来发现站着不动时画面几乎没变化——那问题可能不在算画面，而在"换画面"的时候。</p>
+        <p><span class="k">下一步：</span>想学怎么用工具看帧时间曲线，而不是只看那个帧数数字。</p>
+      </article>
+
       <article class="log" id="l003" data-tag="学习">
         <div class="log-meta"><span>2026-10-22</span><span>#学习</span></div>
         <h3>空仓库的第一天：先把 README 写了</h3>
         <p><span class="k">做了什么：</span>发现自己那个 study.c 打开是"这里啥也没有"。决定先把 README 补上：这个仓库是干什么的、代码怎么跑、每周提交点什么。</p>
         <p><span class="k">卡在哪：</span>一开始想"等有内容了再写 README"，结果仓库一直是空的。顺序搞反了——README 不是总结，是承诺。</p>
         <p><span class="k">下一步：</span>每周至少提交一次，哪怕只是几道练习。</p>
+      </article>
+
+      <article class="log" id="l009" data-tag="健身">
+        <div class="log-meta"><span>2026-09-10</span><span>#健身</span></div>
+        <h3>开始记训练：只记重量和次数</h3>
+        <p><span class="k">做了什么：</span>定了每周三次，每次只记三个动作的重量和次数。不记饮食、不记心率、不记组间休息。</p>
+        <p><span class="k">卡在哪：</span>一开始什么都想记，记了两天就放弃了。砍到只剩一个数字，才坚持下来。</p>
+        <p><span class="k">下一步：</span>把卧推的周记录连成一条线，看看到底有没有在涨。</p>
       </article>
 
       <!-- 补记的两条：比日志开始的时间还早，所以放在最后 -->
@@ -96,7 +120,7 @@
         <p class="muted" style="font-size:13px">补记：这条是 2026-10-27 回头写的。</p>
       </article>
 
-      <p id="filterEmpty" hidden>这一类还没有记录。游戏的第一条大概会是：某个游戏在低配机上为什么掉帧，我去翻了它的渲染管线。</p>
+      <p id="filterEmpty" hidden>这一类还没有记录。</p>
 
     </div>
   </section>
@@ -109,6 +133,6 @@
   </div>
 </footer>
 
-<script src="assets/ui.js?v=5" defer></script>
+<script src="assets/ui.js?v=6" defer></script>
 </body>
 </html>

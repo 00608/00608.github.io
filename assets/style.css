@@ -191,7 +191,10 @@ summary::before{ content:"+ "; font-family:ui-monospace,Menlo,monospace; }
 details[open] summary::before{ content:"− "; }
 summary:hover{ color:var(--accent); }
 .qr-box{ margin-top:10px; }
-.qr-box img{ width:180px; height:auto; display:block; border:1px solid var(--line); }
+.qr-box img{
+  width:180px; height:auto; display:block;
+  border:1px solid var(--line); background:#fff; padding:10px;
+}
 .qr-box small{ display:block; margin-top:8px; color:var(--muted); font-size:12px; }
 
 /* ---------------- 页脚 ---------------- */
@@ -306,6 +309,14 @@ html.js #filterBar{ display:flex; }
 .why b{ color:var(--ink); font-weight:600; }
 
 .sub{ font-size:15px; font-weight:600; margin:30px 0 2px; letter-spacing:.01em; }
+
+/* 终端样式的代码块 */
+.codeblock{
+  margin:12px 0 0; padding:12px 14px; overflow-x:auto;
+  background:#0B0B0C; color:#B9C6BC; border-radius:4px;
+  font:12.5px/1.85 ui-monospace,SFMono-Regular,Menlo,monospace;
+  border:1px solid #1C1C1F;
+}
 
 @media (max-width:640px){
   .tl.hello{ font-size:17px; }

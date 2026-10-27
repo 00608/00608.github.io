@@ -11,7 +11,7 @@
 <meta property="og:title" content="项目 | 无误差">
 <meta property="og:description" content="在做的事和打算做的事。状态标签比日期诚实。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0C'/%3E%3Ctext x='16' y='23' font-size='18' font-family='monospace' fill='%2339D353' text-anchor='middle'%3E0%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/style.css?v=5">
+<link rel="stylesheet" href="assets/style.css?v=6">
 </head>
 <body>
 
@@ -90,6 +90,18 @@
         <h3>todo — 命令行待办</h3>
         <p>150 行 C：结构体、数组、文件读写、命令行参数全用上了。加任务、勾掉、删掉，数据存在本地文件里，关掉再开还在。</p>
         <p class="why"><b>为什么做：</b>想找一个“能跑通、又不只是练习”的东西，顺便把文件读写和结构体一次用明白。</p>
+        <pre class="codeblock">$ gcc -Wall -Wextra -std=c99 todo.c -o todo
+$ ./todo add 学指针
+added #1: 学指针
+$ ./todo add 跑五公里
+added #2: 跑五公里
+$ ./todo done 1
+done #1: 学指针
+$ ./todo list
+[x]   1  学指针
+[ ]   2  跑五公里
+
+2 task(s)</pre>
         <div class="tags"><i>C</i><i>gcc</i><i>文件 I/O</i></div>
       </article>
     </div>
@@ -117,6 +129,6 @@
   </div>
 </footer>
 
-<script src="assets/ui.js?v=5" defer></script>
+<script src="assets/ui.js?v=6" defer></script>
 </body>
 </html>
