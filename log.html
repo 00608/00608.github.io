@@ -1,102 +1,102 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<script>/* 尽早应用已保存的主题，避免闪一下 */try{var t=localStorage.getItem('we-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
+<script>/* 灏芥棭搴旂敤宸蹭繚瀛樼殑涓婚锛岄伩鍏嶉棯涓€涓?*/try{var t=localStorage.getItem('we-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>日志 | 无误差</title>
-<meta name="description" content="学习、跑步、游戏的记录。1–2 周一条，断更说明在忙（或者在偷懒）。">
+<title>鏃ュ織 | 鏃犺宸?/title>
+<meta name="description" content="瀛︿範銆佽窇姝ャ€佹父鎴忕殑璁板綍銆?鈥? 鍛ㄤ竴鏉★紝鏂洿璇存槑鍦ㄥ繖锛堟垨鑰呭湪鍋锋噿锛夈€?>
 <meta name="theme-color" content="#0B0B0C">
 <meta property="og:type" content="website">
-<meta property="og:title" content="日志 | 无误差">
-<meta property="og:description" content="学习、跑步、游戏的记录。一条不超过 500 字。">
+<meta property="og:title" content="鏃ュ織 | 鏃犺宸?>
+<meta property="og:description" content="瀛︿範銆佽窇姝ャ€佹父鎴忕殑璁板綍銆備竴鏉′笉瓒呰繃 500 瀛椼€?>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0C'/%3E%3Ctext x='16' y='23' font-size='18' font-family='monospace' fill='%2339D353' text-anchor='middle'%3E0%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/style.css?v=5">
 </head>
 <body>
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html">无误差</a>
+    <a class="brand" href="index.html">鏃犺宸?/a>
     <nav>
-      <a href="index.html">首页</a>
-      <a href="projects.html">项目</a>
-      <a href="log.html" class="active">日志</a>
-      <a href="about.html">关于</a>
+      <a href="index.html">棣栭〉</a>
+      <a href="projects.html">椤圭洰</a>
+      <a href="log.html" class="active">鏃ュ織</a>
+      <a href="about.html">鍏充簬</a>
     </nav>
-    <button class="theme-btn" id="themeBtn" type="button" aria-label="切换明暗主题" aria-pressed="false">◐</button>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="鍒囨崲鏄庢殫涓婚" aria-pressed="false">鈼?/button>
   </div>
 </header>
 
 <main>
   <div class="wrap page-head">
-    <h1>日志</h1>
-    <p>1–2 周一条，一条不超过 500 字。跑步带配速，健身带重量，游戏写观察。</p>
+    <h1>鏃ュ織</h1>
+    <p>1鈥? 鍛ㄤ竴鏉★紝涓€鏉′笉瓒呰繃 500 瀛椼€傝窇姝ュ甫閰嶉€燂紝鍋ヨ韩甯﹂噸閲忥紝娓告垙鍐欒瀵熴€?/p>
   </div>
 
   <section class="section">
     <div class="wrap">
 
       <div id="filterBar">
-        <button type="button" data-filter="all" class="on">全部</button>
-        <button type="button" data-filter="学习">#学习</button>
-        <button type="button" data-filter="跑步">#跑步</button>
-        <button type="button" data-filter="健身">#健身</button>
-        <button type="button" data-filter="游戏">#游戏</button>
+        <button type="button" data-filter="all" class="on">鍏ㄩ儴</button>
+        <button type="button" data-filter="瀛︿範">#瀛︿範</button>
+        <button type="button" data-filter="璺戞">#璺戞</button>
+        <button type="button" data-filter="鍋ヨ韩">#鍋ヨ韩</button>
+        <button type="button" data-filter="娓告垙">#娓告垙</button>
       </div>
 
-      <article class="log" id="l004" data-tag="学习">
-        <div class="log-meta"><span>2026-10-28</span><span>#学习</span></div>
-        <h3>第一次跟段错误打交道，先怀疑自己</h3>
-        <p><span class="k">做了什么：</span>按 README 的计划写指针练习，程序直接崩了，屏幕上只剩一行 <code>Segmentation fault</code>。第一次见，以为是编译器坏了。</p>
-        <p><span class="k">卡在哪：</span>用了一个没赋值的指针。后来加 <code>-Wall -Wextra -g</code> 编译，再靠 gdb 定位到是哪一行——原来编译器早就警告过，是我没看。</p>
-        <p><span class="k">下一步：</span>以后先看警告，再怀疑编译器。这条也写进笔记了。</p>
+      <article class="log" id="l004" data-tag="瀛︿範">
+        <div class="log-meta"><span>2026-10-28</span><span>#瀛︿範</span></div>
+        <h3>绗竴娆¤窡娈甸敊璇墦浜ら亾锛屽厛鎬€鐤戣嚜宸?/h3>
+        <p><span class="k">鍋氫簡浠€涔堬細</span>鎸?README 鐨勮鍒掑啓鎸囬拡缁冧範锛岀▼搴忕洿鎺ュ穿浜嗭紝灞忓箷涓婂彧鍓╀竴琛?<code>Segmentation fault</code>銆傜涓€娆¤锛屼互涓烘槸缂栬瘧鍣ㄥ潖浜嗐€?/p>
+        <p><span class="k">鍗″湪鍝細</span>鐢ㄤ簡涓€涓病璧嬪€肩殑鎸囬拡銆傚悗鏉ュ姞 <code>-Wall -Wextra -g</code> 缂栬瘧锛屽啀闈?gdb 瀹氫綅鍒版槸鍝竴琛屸€斺€斿師鏉ョ紪璇戝櫒鏃╁氨璀﹀憡杩囷紝鏄垜娌＄湅銆?/p>
+        <p><span class="k">涓嬩竴姝ワ細</span>浠ュ悗鍏堢湅璀﹀憡锛屽啀鎬€鐤戠紪璇戝櫒銆傝繖鏉′篃鍐欒繘绗旇浜嗐€?/p>
       </article>
 
-      <article class="log" id="l001" data-tag="学习">
-        <div class="log-meta"><span>2026-10-27</span><span>#学习</span></div>
-        <h3>v0.1 上线了，它很丑，但它存在</h3>
-        <p><span class="k">做了什么：</span>把首屏做出来了。终端能敲 <code>whoami</code> 和 <code>ls</code>，4 个目录点进去就是各个页面。代码全是手写的 HTML / CSS，加一段原生 JS。</p>
-        <p><span class="k">卡在哪：</span>第一次发布把仓库路径填错了，页面 404 了半小时。后来才明白 GitHub Pages 的地址是 <code>用户名.github.io/仓库名</code>，仓库名不同，路径就不同。</p>
-        <p><span class="k">下一步：</span>补日志页和项目页的细节，然后把 study.c 的 README 写掉。</p>
+      <article class="log" id="l001" data-tag="瀛︿範">
+        <div class="log-meta"><span>2026-10-27</span><span>#瀛︿範</span></div>
+        <h3>v0.1 涓婄嚎浜嗭紝瀹冨緢涓戯紝浣嗗畠瀛樺湪</h3>
+        <p><span class="k">鍋氫簡浠€涔堬細</span>鎶婇灞忓仛鍑烘潵浜嗐€傜粓绔兘鏁?<code>whoami</code> 鍜?<code>ls</code>锛? 涓洰褰曠偣杩涘幓灏辨槸鍚勪釜椤甸潰銆備唬鐮佸叏鏄墜鍐欑殑 HTML / CSS锛屽姞涓€娈靛師鐢?JS銆?/p>
+        <p><span class="k">鍗″湪鍝細</span>绗竴娆″彂甯冩妸浠撳簱璺緞濉敊浜嗭紝椤甸潰 404 浜嗗崐灏忔椂銆傚悗鏉ユ墠鏄庣櫧 GitHub Pages 鐨勫湴鍧€鏄?<code>鐢ㄦ埛鍚?github.io/浠撳簱鍚?/code>锛屼粨搴撳悕涓嶅悓锛岃矾寰勫氨涓嶅悓銆?/p>
+        <p><span class="k">涓嬩竴姝ワ細</span>琛ユ棩蹇楅〉鍜岄」鐩〉鐨勭粏鑺傦紝鐒跺悗鎶?study.c 鐨?README 鍐欐帀銆?/p>
       </article>
 
-      <article class="log" id="l002" data-tag="学习">
-        <div class="log-meta"><span>2026-10-25</span><span>#学习</span></div>
-        <h3>先学 C 而不是 Python，这个决定我还在验证</h3>
-        <p><span class="k">做了什么：</span>把这个问题认真想了一遍。选 C 的理由是：指针、内存、编译这些概念绕不过去，而且嵌入式那边全是 C。</p>
-        <p><span class="k">卡在哪：</span>C 写一个小东西要几十行，Python 三行就完了。中间好几次想放弃，转去写 Python。</p>
-        <p><span class="k">下一步：</span>先不换语言。等把指针和数组彻底写顺了，再用 Python 做 AI 那部分——两条腿走路，不用现在二选一。</p>
+      <article class="log" id="l002" data-tag="瀛︿範">
+        <div class="log-meta"><span>2026-10-25</span><span>#瀛︿範</span></div>
+        <h3>鍏堝 C 鑰屼笉鏄?Python锛岃繖涓喅瀹氭垜杩樺湪楠岃瘉</h3>
+        <p><span class="k">鍋氫簡浠€涔堬細</span>鎶婅繖涓棶棰樿鐪熸兂浜嗕竴閬嶃€傞€?C 鐨勭悊鐢辨槸锛氭寚閽堛€佸唴瀛樸€佺紪璇戣繖浜涙蹇电粫涓嶈繃鍘伙紝鑰屼笖宓屽叆寮忛偅杈瑰叏鏄?C銆?/p>
+        <p><span class="k">鍗″湪鍝細</span>C 鍐欎竴涓皬涓滆タ瑕佸嚑鍗佽锛孭ython 涓夎灏卞畬浜嗐€備腑闂村ソ鍑犳鎯虫斁寮冿紝杞幓鍐?Python銆?/p>
+        <p><span class="k">涓嬩竴姝ワ細</span>鍏堜笉鎹㈣瑷€銆傜瓑鎶婃寚閽堝拰鏁扮粍褰诲簳鍐欓『浜嗭紝鍐嶇敤 Python 鍋?AI 閭ｉ儴鍒嗏€斺€斾袱鏉¤吙璧拌矾锛屼笉鐢ㄧ幇鍦ㄤ簩閫変竴銆?/p>
       </article>
 
-      <article class="log" id="l003" data-tag="学习">
-        <div class="log-meta"><span>2026-10-22</span><span>#学习</span></div>
-        <h3>空仓库的第一天：先把 README 写了</h3>
-        <p><span class="k">做了什么：</span>发现自己那个 study.c 打开是"这里啥也没有"。决定先把 README 补上：这个仓库是干什么的、代码怎么跑、每周提交点什么。</p>
-        <p><span class="k">卡在哪：</span>一开始想"等有内容了再写 README"，结果仓库一直是空的。顺序搞反了——README 不是总结，是承诺。</p>
-        <p><span class="k">下一步：</span>每周至少提交一次，哪怕只是几道练习。</p>
+      <article class="log" id="l003" data-tag="瀛︿範">
+        <div class="log-meta"><span>2026-10-22</span><span>#瀛︿範</span></div>
+        <h3>绌轰粨搴撶殑绗竴澶╋細鍏堟妸 README 鍐欎簡</h3>
+        <p><span class="k">鍋氫簡浠€涔堬細</span>鍙戠幇鑷繁閭ｄ釜 study.c 鎵撳紑鏄?杩欓噷鍟ヤ篃娌℃湁"銆傚喅瀹氬厛鎶?README 琛ヤ笂锛氳繖涓粨搴撴槸骞蹭粈涔堢殑銆佷唬鐮佹€庝箞璺戙€佹瘡鍛ㄦ彁浜ょ偣浠€涔堛€?/p>
+        <p><span class="k">鍗″湪鍝細</span>涓€寮€濮嬫兂"绛夋湁鍐呭浜嗗啀鍐?README"锛岀粨鏋滀粨搴撲竴鐩存槸绌虹殑銆傞『搴忔悶鍙嶄簡鈥斺€擱EADME 涓嶆槸鎬荤粨锛屾槸鎵胯銆?/p>
+        <p><span class="k">涓嬩竴姝ワ細</span>姣忓懆鑷冲皯鎻愪氦涓€娆★紝鍝€曞彧鏄嚑閬撶粌涔犮€?/p>
       </article>
 
-      <!-- 补记的两条：比日志开始的时间还早，所以放在最后 -->
-      <article class="log" id="l005" data-tag="跑步">
-        <div class="log-meta"><span>2026-04-15</span><span>#跑步</span></div>
-        <h3>10 公里，配速第一次跑进 5 分整</h3>
-        <p><span class="k">做了什么：</span>5'00"/km 跑完 10 公里，全程没停。最后两公里是靠数呼吸撑过去的——四步一吸、四步一呼。</p>
-        <p><span class="k">卡在哪：</span>前 3 公里跑太急，心率直接顶到 180，后面全靠意志硬扛，不是靠体能。</p>
-        <p><span class="k">下一步：</span>试试前 5 公里压到 5'15"，把后半程跑快。负分段才算真本事。</p>
-        <p class="muted" style="font-size:13px">补记：这条是 2026-10-27 回头写的，当时没记录。</p>
+      <!-- 琛ヨ鐨勪袱鏉★細姣旀棩蹇楀紑濮嬬殑鏃堕棿杩樻棭锛屾墍浠ユ斁鍦ㄦ渶鍚?-->
+      <article class="log" id="l005" data-tag="璺戞">
+        <div class="log-meta"><span>2026-04-15</span><span>#璺戞</span></div>
+        <h3>10 鍏噷锛岄厤閫熺涓€娆¤窇杩?5 鍒嗘暣</h3>
+        <p><span class="k">鍋氫簡浠€涔堬細</span>5'00"/km 璺戝畬 10 鍏噷锛屽叏绋嬫病鍋溿€傛渶鍚庝袱鍏噷鏄潬鏁板懠鍚告拺杩囧幓鐨勨€斺€斿洓姝ヤ竴鍚搞€佸洓姝ヤ竴鍛笺€?/p>
+        <p><span class="k">鍗″湪鍝細</span>鍓?3 鍏噷璺戝お鎬ワ紝蹇冪巼鐩存帴椤跺埌 180锛屽悗闈㈠叏闈犳剰蹇楃‖鎵涳紝涓嶆槸闈犱綋鑳姐€?/p>
+        <p><span class="k">涓嬩竴姝ワ細</span>璇曡瘯鍓?5 鍏噷鍘嬪埌 5'15"锛屾妸鍚庡崐绋嬭窇蹇€傝礋鍒嗘鎵嶇畻鐪熸湰浜嬨€?/p>
+        <p class="muted" style="font-size:13px">琛ヨ锛氳繖鏉℃槸 2026-10-27 鍥炲ご鍐欑殑锛屽綋鏃舵病璁板綍銆?/p>
       </article>
 
-      <article class="log" id="l006" data-tag="健身">
-        <div class="log-meta"><span>2026-08</span><span>#健身</span></div>
-        <h3>卧推第一次到 50 公斤（含杆）</h3>
-        <p><span class="k">做了什么：</span>卧推加杆 50 公斤，能起 3 组 5 次。从空杆 20 公斤开始，练了几个月才加上来。</p>
-        <p><span class="k">卡在哪：</span>重量一上去动作就变形：肩膀前顶、轨迹发飘。数字涨得比动作快，这不是好事。</p>
-        <p><span class="k">下一步：</span>降回 45 公斤，把动作练标准再加重。体态比数字重要。</p>
-        <p class="muted" style="font-size:13px">补记：这条是 2026-10-27 回头写的。</p>
+      <article class="log" id="l006" data-tag="鍋ヨ韩">
+        <div class="log-meta"><span>2026-08</span><span>#鍋ヨ韩</span></div>
+        <h3>鍗ф帹绗竴娆″埌 50 鍏枻锛堝惈鏉嗭級</h3>
+        <p><span class="k">鍋氫簡浠€涔堬細</span>鍗ф帹鍔犳潌 50 鍏枻锛岃兘璧?3 缁?5 娆°€備粠绌烘潌 20 鍏枻寮€濮嬶紝缁冧簡鍑犱釜鏈堟墠鍔犱笂鏉ャ€?/p>
+        <p><span class="k">鍗″湪鍝細</span>閲嶉噺涓€涓婂幓鍔ㄤ綔灏卞彉褰細鑲╄唨鍓嶉《銆佽建杩瑰彂椋樸€傛暟瀛楁定寰楁瘮鍔ㄤ綔蹇紝杩欎笉鏄ソ浜嬨€?/p>
+        <p><span class="k">涓嬩竴姝ワ細</span>闄嶅洖 45 鍏枻锛屾妸鍔ㄤ綔缁冩爣鍑嗗啀鍔犻噸銆備綋鎬佹瘮鏁板瓧閲嶈銆?/p>
+        <p class="muted" style="font-size:13px">琛ヨ锛氳繖鏉℃槸 2026-10-27 鍥炲ご鍐欑殑銆?/p>
       </article>
 
-      <p id="filterEmpty" hidden>这一类还没有记录。游戏的第一条大概会是：某个游戏在低配机上为什么掉帧，我去翻了它的渲染管线。</p>
+      <p id="filterEmpty" hidden>杩欎竴绫昏繕娌℃湁璁板綍銆傛父鎴忕殑绗竴鏉″ぇ姒備細鏄細鏌愪釜娓告垙鍦ㄤ綆閰嶆満涓婁负浠€涔堟帀甯э紝鎴戝幓缈讳簡瀹冪殑娓叉煋绠＄嚎銆?/p>
 
     </div>
   </section>
@@ -105,10 +105,10 @@
 <footer>
   <div class="wrap">
     <span class="stamp" aria-hidden="true">0&nbsp;ERROR</span>
-    <p class="fine">本站由我自己写的 · HTML / CSS / 一点点 JavaScript · 2026</p>
+    <p class="fine">鏈珯鐢辨垜鑷繁鍐欑殑 路 HTML / CSS / 涓€鐐圭偣 JavaScript 路 2026</p>
   </div>
 </footer>
 
-<script src="assets/ui.js" defer></script>
+<script src="assets/ui.js?v=5" defer></script>
 </body>
 </html>

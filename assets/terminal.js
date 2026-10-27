@@ -73,9 +73,7 @@
 
   function play() {
     var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var seen = false;
-    try { seen = localStorage.getItem('we-seen') === '1'; } catch (e) {}
-    if (reduce || seen) { revealAll(); return; }
+    if (reduce) { revealAll(); return; }   // 只尊重"减少动效"，不再因为"看过"就跳过
 
     boot.classList.add('hiding');   // 只在真的开始播动画时才隐藏
 
@@ -86,10 +84,10 @@
         if (l.hasAttribute('data-type')) {
           l.style.opacity = '1';                 // 先露出来，再逐字打
           var ty = l.querySelector('.ty');
-          return typeInto(ty, 40).then(function () { return wait(80); });
+          return typeInto(ty, 55).then(function () { return wait(110); });
         }
         l.style.opacity = '1';
-        return wait(l.classList.contains('dirs') ? 240 : 40);
+        return wait(l.classList.contains('dirs') ? 220 : 70);
       });
     });
     chain.then(function () {

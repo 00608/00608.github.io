@@ -341,7 +341,7 @@ html.js #filterBar{ display:flex; }
   font-size:13.5px; line-height:2.05;
 }
 .lines{ display:flex; flex-direction:column; }
-.ln{ display:flex; gap:10px; white-space:pre-wrap; word-break:break-word; }
+.ln{ display:flex; gap:10px; white-space:pre-wrap; word-break:break-word; transition:opacity .28s ease; }
 .ln.out{ display:block; color:#9E9EA8; }
 .ln.out b{ color:#E8E8EA; font-weight:600; }
 .ln.err{ color:#6E6E76; }
@@ -370,7 +370,8 @@ html.js #filterBar{ display:flex; }
 .boot-hint{ margin:20px 0 0; color:#5E5E66; font-size:12px; }
 .boot-hint b{ color:#B9B9C1; }
 html.js .prompt, html.js .boot-hint{ opacity:0; }
-html.js .prompt.on, html.js .boot-hint.on{ opacity:1; transition:opacity .4s ease; }
+html.js .prompt.on, html.js .boot-hint.on{ opacity:1; }
+html.js .boot-hint.on{ transition:opacity .45s ease .8s; }
 
 .skip{
   position:absolute; right:20px; bottom:22px;
@@ -381,17 +382,26 @@ html.js .prompt.on, html.js .boot-hint.on{ opacity:1; transition:opacity .4s eas
 .skip span{ margin-left:6px; }
 .skip:hover{ color:var(--accent); border-color:var(--accent); }
 
-/* 命令按钮（不用键盘） */
+/* 命令按钮（不用键盘）：一个个浮出来 */
 .cmds{
-  display:flex; flex-wrap:wrap; gap:8px; margin-top:22px;
-  opacity:0; pointer-events:none;
+  display:flex; flex-wrap:wrap; gap:8px; margin-top:24px;
+  pointer-events:none;
 }
-.cmds.on{ opacity:1; pointer-events:auto; transition:opacity .35s ease; }
+.cmds.on{ pointer-events:auto; }
 .cmds button{
   background:transparent; border:1px solid #26262B; color:#9E9EA8;
   font:12.5px ui-monospace,SFMono-Regular,Menlo,monospace;
   padding:5px 10px; border-radius:3px; cursor:pointer;
+  opacity:0; transform:translateY(6px);
 }
+.cmds.on button{ animation:btnIn .36s cubic-bezier(.2,.7,.3,1) forwards; }
+.cmds.on button:nth-child(1){ animation-delay:.05s; }
+.cmds.on button:nth-child(2){ animation-delay:.15s; }
+.cmds.on button:nth-child(3){ animation-delay:.25s; }
+.cmds.on button:nth-child(4){ animation-delay:.35s; }
+.cmds.on button:nth-child(5){ animation-delay:.45s; }
+.cmds.on button:nth-child(6){ animation-delay:.55s; }
+@keyframes btnIn{ to{ opacity:1; transform:none; } }
 .cmds button:hover{ color:var(--accent); border-color:var(--accent); }
 .cmds button:active{ color:#fff; border-color:#fff; }
 
