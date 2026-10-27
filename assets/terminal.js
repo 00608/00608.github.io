@@ -10,6 +10,8 @@
   /* 安全网：出任何未捕获错误，就取消隐藏，让 HTML 里的文字直接显示 */
   window.addEventListener('error', function () {
     document.documentElement.classList.remove('js');
+    var b = document.getElementById('boot');
+    if (b) b.classList.remove('hiding');
   });
 
   var boot = document.getElementById('boot');
@@ -50,6 +52,8 @@
   function end() {
     if (end.done) return;
     end.done = true;
+    boot.classList.remove('hiding');
+    lines.forEach(function (l) { l.style.opacity = '1'; l.classList.add('on'); });
     if (skip) skip.hidden = true;
     if (cmds) cmds.classList.add('on');
     if (hint) hint.classList.add('on');
@@ -60,7 +64,6 @@
     finished = true;
     timers.forEach(clearTimeout);
     timers = [];
-    lines.forEach(function (l) { l.classList.add('on'); });
     Array.prototype.forEach.call(linesEl.querySelectorAll('.ty'), function (el) {
       if (el.dataset.full != null) el.textContent = el.dataset.full;
     });
@@ -74,18 +77,18 @@
     try { seen = localStorage.getItem('we-seen') === '1'; } catch (e) {}
     if (reduce || seen) { revealAll(); return; }
 
+    boot.classList.add('hiding');   // 只在真的开始播动画时才隐藏
+
     var chain = Promise.resolve();
     lines.forEach(function (l) {
       chain = chain.then(function () {
         if (finished) return;
         if (l.hasAttribute('data-type')) {
+          l.style.opacity = '1';                 // 先露出来，再逐字打
           var ty = l.querySelector('.ty');
-          return typeInto(ty, 40).then(function () {
-            l.classList.add('on');
-            return wait(80);
-          });
+          return typeInto(ty, 40).then(function () { return wait(80); });
         }
-        l.classList.add('on');
+        l.style.opacity = '1';
         return wait(l.classList.contains('dirs') ? 240 : 40);
       });
     });

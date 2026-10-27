@@ -347,7 +347,8 @@ html.js #filterBar{ display:flex; }
 .ln.err{ color:#6E6E76; }
 .ps{ color:#5E5E66; flex:none; }
 .ty{ color:#F2F2F3; }
-html.js .ln{ opacity:0; }
+/* 只在启动动画进行时隐藏；动画一结束就把 hiding 类整个拿掉，不跟优先级打架 */
+.boot.hiding .ln{ opacity:0; }
 .ln.on{ opacity:1; }
 .dirs a{ color:var(--accent); margin-right:18px; text-decoration:none; }
 .dirs a:hover{ text-decoration:underline; }
