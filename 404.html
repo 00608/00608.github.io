@@ -1,14 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
 <script>try{var t=localStorage.getItem('we-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>404 | 鏃犺宸?/title>
+<title>404 | 无误差</title>
 <meta name="robots" content="noindex">
 <style>
-  /* 404 鐢ㄥ唴鑱旀牱寮忥細GitHub Pages 鐨?404 浼氬湪浠绘剰灞傜骇鐨?URL 涓婃覆鏌擄紝
-     鐩稿璺緞鐨?CSS 鍙兘鍙栦笉鍒帮紝鎵€浠ヨ繖閲屼笉渚濊禆澶栭儴鏂囦欢銆?*/
+  /* 404 用内联样式：GitHub Pages 的 404 会在任意层级的 URL 上渲染，
+     相对路径的 CSS 可能取不到，所以这里不依赖外部文件。 */
   :root{ --ink:#0B0B0C; --paper:#FAFAF8; --muted:#6B6B70; --accent:#39D353; }
   @media (prefers-color-scheme: dark){ :root{ --ink:#F2F2F0; --paper:#111112; --muted:#9A9AA0; } }
   :root[data-theme="light"]{ --ink:#0B0B0C; --paper:#FAFAF8; --muted:#6B6B70; }
@@ -46,15 +46,16 @@
     <div class="stamp">0&nbsp;ERROR</div>
 
     <div class="term">
-      <div><span class="ps">no-errors@wuwucha:~$</span> cat 浣犳壘鐨勯〉闈?/div>
-      <div class="err">cat: 浣犳壘鐨勯〉闈? No such file or directory</div>
-      <div><span class="ps">no-errors@wuwucha:~$</span> 鈻?/div>
+      <div><span class="ps">no-errors@wuwucha:~$</span> cat 你找的页面</div>
+      <div class="err">cat: 你找的页面: No such file or directory</div>
+      <div><span class="ps">no-errors@wuwucha:~$</span> █</div>
     </div>
 
-    <h1>杩欎釜椤甸潰涓嶅瓨鍦?/h1>
-    <p>鍙兘鏄摼鎺ュ啓閿欎簡锛屼篃鍙兘鏄畠杩樺湪鎴戣剳瀛愰噷锛屾病鍐欏埌纭洏涓娿€?/p>
-    <!-- 濡傛灉浣犳槸銆岀敤鎴蜂富椤点€嶄粨搴擄紙鐢ㄦ埛鍚?github.io锛夛紝涓嬮潰杩欎釜 / 灏辨槸瀵圭殑銆?         濡傛灉鏀惧湪銆岄」鐩粨搴撱€嶏紙鐢ㄦ埛鍚?github.io/浠撳簱鍚嶏級锛屾妸 / 鏀规垚 /浠撳簱鍚? 銆?-->
-    <p><a href="/">鈫?鍥為椤?/a></p>
+    <h1>这个页面不存在</h1>
+    <p>可能是链接写错了，也可能是它还在我脑子里，没写到硬盘上。</p>
+    <!-- 如果你是「用户主页」仓库（用户名.github.io），下面这个 / 就是对的。
+         如果放在「项目仓库」（用户名.github.io/仓库名），把 / 改成 /仓库名/ 。 -->
+    <p><a href="/">← 回首页</a></p>
   </div>
 </body>
 </html>
